@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "902387129372",
+    "project_id": "demo1-6nugji",
+    "storage_bucket": "demo1-6nugji.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:902387129372:android:28c4a02300646790d2d3d9",
+        "android_client_info": {
+          "package_name": "com.mycompany.demo1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUHx81sVrsp6e3WuefPeZZTtR4Ekhy9cs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
