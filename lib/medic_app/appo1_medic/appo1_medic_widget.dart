@@ -8,16 +8,7 @@ import 'appo1_medic_model.dart';
 export 'appo1_medic_model.dart';
 
 class Appo1MedicWidget extends StatefulWidget {
-  const Appo1MedicWidget({
-    super.key,
-    required this.doctorName,
-    required this.appointmentDate,
-    required this.disesaseName,
-  });
-
-  final String? doctorName;
-  final String? appointmentDate;
-  final String? disesaseName;
+  const Appo1MedicWidget({super.key});
 
   @override
   State<Appo1MedicWidget> createState() => _Appo1MedicWidgetState();
@@ -146,15 +137,13 @@ class _Appo1MedicWidgetState extends State<Appo1MedicWidget>
                           padding: const EdgeInsetsDirectional.fromSTEB(
                               24.0, 0.0, 0.0, 0.0),
                           child: Text(
-                            valueOrDefault<String>(
-                              widget.appointmentDate,
-                              'r',
-                            ),
+                            '8 Sep',
                             style: FlutterFlowTheme.of(context)
-                                .displayLarge
+                                .displayMedium
                                 .override(
                                   fontFamily: 'Outfit',
                                   letterSpacing: 0.0,
+                                  fontWeight: FontWeight.bold,
                                 ),
                           ),
                         ),
@@ -167,16 +156,14 @@ class _Appo1MedicWidgetState extends State<Appo1MedicWidget>
                           padding: const EdgeInsetsDirectional.fromSTEB(
                               24.0, 4.0, 0.0, 0.0),
                           child: Text(
-                            valueOrDefault<String>(
-                              widget.doctorName,
-                              'John',
-                            ),
+                            'Dr. Stephan Raj',
                             textAlign: TextAlign.start,
                             style: FlutterFlowTheme.of(context)
-                                .displaySmall
+                                .headlineSmall
                                 .override(
                                   fontFamily: 'Outfit',
                                   letterSpacing: 0.0,
+                                  fontWeight: FontWeight.bold,
                                 ),
                           ),
                         ),
@@ -184,10 +171,7 @@ class _Appo1MedicWidgetState extends State<Appo1MedicWidget>
                           padding: const EdgeInsetsDirectional.fromSTEB(
                               24.0, 12.0, 0.0, 0.0),
                           child: Text(
-                            valueOrDefault<String>(
-                              widget.disesaseName,
-                              'Fever',
-                            ),
+                            'Description',
                             textAlign: TextAlign.start,
                             style: FlutterFlowTheme.of(context)
                                 .headlineSmall
@@ -199,18 +183,29 @@ class _Appo1MedicWidgetState extends State<Appo1MedicWidget>
                         ),
                         Padding(
                           padding: const EdgeInsetsDirectional.fromSTEB(
-                              24.0, 20.0, 24.0, 12.0),
-                          child: Text(
-                            'Experience the power of Supabase\'s real-time database and authentication services combined with intuitive visual design using FlutterFlow, significantly simplifying the app development process while delivering feature-rich, high-performance applications. This integration makes it possible to create visually stunning, data-driven apps with ease and speed.',
-                            textAlign: TextAlign.start,
-                            style:
-                                FlutterFlowTheme.of(context).bodyLarge.override(
+                              10.0, 20.0, 10.0, 20.0),
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: const Color(0xFFF0F7F8),
+                              borderRadius: BorderRadius.circular(24.0),
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  24.0, 20.0, 24.0, 12.0),
+                              child: Text(
+                                '- Patient reported persistent headaches over the last two weeks.\n\n- Discussed possible causes, including stress and lack of sleep.\n\n- Blood pressure and heart rate were slightly elevated.\n\n- Doctor recommended lifestyle changes such as more sleep and diet.\n\n- Advised patient to reduce screen time and take regular breaks.\n\n- Diagnosis\tTension headaches due to stress and sleep deprivation.',
+                                textAlign: TextAlign.start,
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyLarge
+                                    .override(
                                       fontFamily: 'Readex Pro',
                                       fontSize: 20.0,
                                       letterSpacing: 0.0,
                                     ),
-                          ).animateOnPageLoad(
-                              animationsMap['textOnPageLoadAnimation']!),
+                              ).animateOnPageLoad(
+                                  animationsMap['textOnPageLoadAnimation']!),
+                            ),
+                          ),
                         ),
                         Padding(
                           padding: const EdgeInsetsDirectional.fromSTEB(
@@ -274,7 +269,7 @@ class _Appo1MedicWidgetState extends State<Appo1MedicWidget>
                                                   CrossAxisAlignment.start,
                                               children: [
                                                 Text(
-                                                  'Med7865',
+                                                  ' Ibuprofen ',
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .bodyLarge
@@ -289,7 +284,7 @@ class _Appo1MedicWidgetState extends State<Appo1MedicWidget>
                                                       .fromSTEB(
                                                           0.0, 4.0, 0.0, 0.0),
                                                   child: Text(
-                                                    'A short history into what UX design is and the history of it.',
+                                                    'for headache',
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .labelMedium
@@ -305,7 +300,7 @@ class _Appo1MedicWidgetState extends State<Appo1MedicWidget>
                                           ),
                                         ),
                                         Text(
-                                          'Day , Night',
+                                          '(as needed)',
                                           textAlign: TextAlign.end,
                                           style: FlutterFlowTheme.of(context)
                                               .headlineSmall
@@ -358,7 +353,7 @@ class _Appo1MedicWidgetState extends State<Appo1MedicWidget>
                                                   CrossAxisAlignment.start,
                                               children: [
                                                 Text(
-                                                  'Crecida',
+                                                  'Vitamin D supplements',
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .bodyLarge
@@ -373,7 +368,7 @@ class _Appo1MedicWidgetState extends State<Appo1MedicWidget>
                                                       .fromSTEB(
                                                           0.0, 4.0, 0.0, 0.0),
                                                   child: Text(
-                                                    'A short history into what UX design is and the history of it.',
+                                                    'fro further recovery',
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .labelMedium
@@ -389,7 +384,7 @@ class _Appo1MedicWidgetState extends State<Appo1MedicWidget>
                                           ),
                                         ),
                                         Text(
-                                          'Night',
+                                          'day & night',
                                           textAlign: TextAlign.end,
                                           style: FlutterFlowTheme.of(context)
                                               .headlineSmall
@@ -457,7 +452,7 @@ class _Appo1MedicWidgetState extends State<Appo1MedicWidget>
                                                       .fromSTEB(
                                                           0.0, 4.0, 0.0, 0.0),
                                                   child: Text(
-                                                    'A short history into what UX design is and the history of it.',
+                                                    'to normalize blood pressure',
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .labelMedium

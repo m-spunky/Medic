@@ -1,4 +1,4 @@
-# Medic
+# medic
 
 A new Flutter project.
 

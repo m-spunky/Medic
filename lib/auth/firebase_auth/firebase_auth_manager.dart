@@ -282,7 +282,7 @@ class FirebaseAuthManager extends AuthManager
       final userCredential = await signInFunc();
       return userCredential == null
           ? null
-          : Demo1FirebaseUser.fromUserCredential(userCredential);
+          : MedicFirebaseUser.fromUserCredential(userCredential);
     } on FirebaseAuthException catch (e) {
       final errorMsg = switch (e.code) {
         'email-already-in-use' =>

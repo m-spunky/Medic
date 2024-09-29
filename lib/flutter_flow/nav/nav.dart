@@ -6,6 +6,7 @@ import 'package:provider/provider.dart';
 import '/auth/base_auth_user_provider.dart';
 
 import '/index.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 
 export 'package:go_router/go_router.dart';
@@ -119,16 +120,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'coming_appoCopy',
           path: '/comingAppoCopy',
-          builder: (context, params) => ComingAppoCopyWidget(
-            scheduleDay: params.getParam(
-              'scheduleDay',
-              ParamType.String,
-            ),
-            scheduleMonth: params.getParam(
-              'scheduleMonth',
-              ParamType.String,
-            ),
-          ),
+          builder: (context, params) => const ComingAppoCopyWidget(),
         ),
         FFRoute(
           name: 'medicChatMedic',
@@ -179,20 +171,17 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'appo1Medic',
           path: '/appo1Medic',
-          builder: (context, params) => Appo1MedicWidget(
-            doctorName: params.getParam(
-              'doctorName',
-              ParamType.String,
-            ),
-            appointmentDate: params.getParam(
-              'appointmentDate',
-              ParamType.String,
-            ),
-            disesaseName: params.getParam(
-              'disesaseName',
-              ParamType.String,
-            ),
-          ),
+          builder: (context, params) => const Appo1MedicWidget(),
+        ),
+        FFRoute(
+          name: 'vision',
+          path: '/vision',
+          builder: (context, params) => const VisionWidget(),
+        ),
+        FFRoute(
+          name: 'coming_appoCopyCopy',
+          path: '/comingAppoCopyCopy',
+          builder: (context, params) => const ComingAppoCopyCopyWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -375,11 +364,15 @@ class FFRoute {
                 )
               : builder(context, ffParams);
           final child = appStateNotifier.loading
-              ? Container(
-                  color: const Color(0x00561717),
-                  child: Image.asset(
-                    'assets/images/medic_icon.png',
-                    fit: BoxFit.contain,
+              ? Center(
+                  child: SizedBox(
+                    width: 50.0,
+                    height: 50.0,
+                    child: CircularProgressIndicator(
+                      valueColor: AlwaysStoppedAnimation<Color>(
+                        FlutterFlowTheme.of(context).primary,
+                      ),
+                    ),
                   ),
                 )
               : page;

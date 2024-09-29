@@ -461,14 +461,23 @@ class _ProfileMedicWidgetState extends State<ProfileMedicWidget>
                                       Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 30.0, 0.0),
-                                        child: Text(
-                                          'Vision',
-                                          style: FlutterFlowTheme.of(context)
-                                              .headlineLarge
-                                              .override(
-                                                fontFamily: 'Outfit',
-                                                letterSpacing: 0.0,
-                                              ),
+                                        child: InkWell(
+                                          splashColor: Colors.transparent,
+                                          focusColor: Colors.transparent,
+                                          hoverColor: Colors.transparent,
+                                          highlightColor: Colors.transparent,
+                                          onTap: () async {
+                                            context.pushNamed('vision');
+                                          },
+                                          child: Text(
+                                            'Vision',
+                                            style: FlutterFlowTheme.of(context)
+                                                .headlineLarge
+                                                .override(
+                                                  fontFamily: 'Outfit',
+                                                  letterSpacing: 0.0,
+                                                ),
+                                          ),
                                         ),
                                       ),
                                       Padding(
@@ -527,8 +536,8 @@ class _ProfileMedicWidgetState extends State<ProfileMedicWidget>
                                       padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 20.0, 0.0),
                                       child: FFButtonWidget(
-                                        onPressed: () {
-                                          print('Button pressed ...');
+                                        onPressed: () async {
+                                          context.pushNamed('logInMedic');
                                         },
                                         text: 'Login',
                                         options: FFButtonOptions(
@@ -819,100 +828,102 @@ class _ProfileMedicWidgetState extends State<ProfileMedicWidget>
                                         hoverColor: Colors.transparent,
                                         highlightColor: Colors.transparent,
                                         onTap: () async {
-                                          context.pushNamed(
-                                            'appo1Medic',
-                                            queryParameters: {
-                                              'doctorName': serializeParam(
-                                                'Dr. Richards',
-                                                ParamType.String,
-                                              ),
-                                              'appointmentDate': serializeParam(
-                                                '8 Sep',
-                                                ParamType.String,
-                                              ),
-                                              'disesaseName': serializeParam(
-                                                'Fever',
-                                                ParamType.String,
-                                              ),
-                                            }.withoutNulls,
-                                          );
+                                          context.pushNamed('appo1Medic');
                                         },
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
-                                            Container(
-                                              width: double.infinity,
-                                              height: 140.0,
-                                              decoration: BoxDecoration(
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .secondary,
-                                                borderRadius: const BorderRadius.only(
-                                                  bottomLeft:
-                                                      Radius.circular(0.0),
-                                                  bottomRight:
-                                                      Radius.circular(0.0),
-                                                  topLeft:
-                                                      Radius.circular(12.0),
-                                                  topRight:
-                                                      Radius.circular(12.0),
+                                            InkWell(
+                                              splashColor: Colors.transparent,
+                                              focusColor: Colors.transparent,
+                                              hoverColor: Colors.transparent,
+                                              highlightColor:
+                                                  Colors.transparent,
+                                              onTap: () async {
+                                                context.pushNamed('appo1Medic');
+                                              },
+                                              child: Container(
+                                                width: double.infinity,
+                                                height: 140.0,
+                                                decoration: BoxDecoration(
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .secondary,
+                                                  borderRadius:
+                                                      const BorderRadius.only(
+                                                    bottomLeft:
+                                                        Radius.circular(0.0),
+                                                    bottomRight:
+                                                        Radius.circular(0.0),
+                                                    topLeft:
+                                                        Radius.circular(12.0),
+                                                    topRight:
+                                                        Radius.circular(12.0),
+                                                  ),
                                                 ),
-                                              ),
-                                              child: Padding(
-                                                padding: const EdgeInsets.all(12.0),
-                                                child: Column(
-                                                  mainAxisSize:
-                                                      MainAxisSize.max,
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment
-                                                          .spaceBetween,
-                                                  crossAxisAlignment:
-                                                      CrossAxisAlignment.start,
-                                                  children: [
-                                                    Container(
-                                                      width: 36.0,
-                                                      height: 36.0,
-                                                      decoration: BoxDecoration(
-                                                        color:
-                                                            const Color(0x98FFFFFF),
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(12.0),
+                                                child: Padding(
+                                                  padding: const EdgeInsets.all(12.0),
+                                                  child: Column(
+                                                    mainAxisSize:
+                                                        MainAxisSize.max,
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .spaceBetween,
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .start,
+                                                    children: [
+                                                      Container(
+                                                        width: 36.0,
+                                                        height: 36.0,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          color:
+                                                              const Color(0x98FFFFFF),
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(
+                                                                      12.0),
+                                                        ),
+                                                        alignment:
+                                                            const AlignmentDirectional(
+                                                                0.0, 0.0),
+                                                        child: const Icon(
+                                                          Icons.desktop_windows,
+                                                          color: Colors.white,
+                                                          size: 20.0,
+                                                        ),
                                                       ),
-                                                      alignment:
-                                                          const AlignmentDirectional(
-                                                              0.0, 0.0),
-                                                      child: const Icon(
-                                                        Icons.desktop_windows,
-                                                        color: Colors.white,
-                                                        size: 20.0,
+                                                      Text(
+                                                        'Dr. Stephan',
+                                                        style: FlutterFlowTheme
+                                                                .of(context)
+                                                            .titleMedium
+                                                            .override(
+                                                              fontFamily:
+                                                                  'Readex Pro',
+                                                              color:
+                                                                  Colors.white,
+                                                              letterSpacing:
+                                                                  0.0,
+                                                            ),
                                                       ),
-                                                    ),
-                                                    Text(
-                                                      'Dr. Richards',
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .titleMedium
-                                                          .override(
-                                                            fontFamily:
-                                                                'Readex Pro',
-                                                            color: Colors.white,
-                                                            letterSpacing: 0.0,
-                                                          ),
-                                                    ),
-                                                    Text(
-                                                      '8 Sep',
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .bodyMedium
-                                                          .override(
-                                                            fontFamily:
-                                                                'Readex Pro',
-                                                            color: Colors.white,
-                                                            letterSpacing: 0.0,
-                                                          ),
-                                                    ),
-                                                  ],
+                                                      Text(
+                                                        '8 Sep',
+                                                        style: FlutterFlowTheme
+                                                                .of(context)
+                                                            .bodyMedium
+                                                            .override(
+                                                              fontFamily:
+                                                                  'Readex Pro',
+                                                              color:
+                                                                  Colors.white,
+                                                              letterSpacing:
+                                                                  0.0,
+                                                            ),
+                                                      ),
+                                                    ],
+                                                  ),
                                                 ),
                                               ),
                                             ),
@@ -932,7 +943,7 @@ class _ProfileMedicWidgetState extends State<ProfileMedicWidget>
                                                             .fromSTEB(0.0, 0.0,
                                                                 8.0, 0.0),
                                                     child: Text(
-                                                      'Fever',
+                                                      'Headache',
                                                       style: FlutterFlowTheme
                                                               .of(context)
                                                           .bodyMedium
@@ -981,23 +992,7 @@ class _ProfileMedicWidgetState extends State<ProfileMedicWidget>
                                         hoverColor: Colors.transparent,
                                         highlightColor: Colors.transparent,
                                         onTap: () async {
-                                          context.pushNamed(
-                                            'appo1Medic',
-                                            queryParameters: {
-                                              'doctorName': serializeParam(
-                                                'Dr. Laila',
-                                                ParamType.String,
-                                              ),
-                                              'appointmentDate': serializeParam(
-                                                '10 Sep',
-                                                ParamType.String,
-                                              ),
-                                              'disesaseName': serializeParam(
-                                                'Diabetes',
-                                                ParamType.String,
-                                              ),
-                                            }.withoutNulls,
-                                          );
+                                          context.pushNamed('appo1Medic');
                                         },
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
@@ -1144,23 +1139,7 @@ class _ProfileMedicWidgetState extends State<ProfileMedicWidget>
                                         hoverColor: Colors.transparent,
                                         highlightColor: Colors.transparent,
                                         onTap: () async {
-                                          context.pushNamed(
-                                            'appo1Medic',
-                                            queryParameters: {
-                                              'doctorName': serializeParam(
-                                                'Dr.Richards',
-                                                ParamType.String,
-                                              ),
-                                              'appointmentDate': serializeParam(
-                                                '12 Sep',
-                                                ParamType.String,
-                                              ),
-                                              'disesaseName': serializeParam(
-                                                'Heart',
-                                                ParamType.String,
-                                              ),
-                                            }.withoutNulls,
-                                          );
+                                          context.pushNamed('appo1Medic');
                                         },
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
@@ -3918,8 +3897,8 @@ class _ProfileMedicWidgetState extends State<ProfileMedicWidget>
                                       padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 20.0, 0.0),
                                       child: FFButtonWidget(
-                                        onPressed: () {
-                                          print('Button pressed ...');
+                                        onPressed: () async {
+                                          context.pushNamed('logInMedic');
                                         },
                                         text: 'Login',
                                         options: FFButtonOptions(
@@ -3953,7 +3932,7 @@ class _ProfileMedicWidgetState extends State<ProfileMedicWidget>
                                     ),
                                     FFButtonWidget(
                                       onPressed: () async {
-                                        context.pushNamed('logInMedic');
+                                        context.pushNamed('signinMedic');
                                       },
                                       text: 'Signup',
                                       options: FFButtonOptions(
@@ -4133,9 +4112,8 @@ class _ProfileMedicWidgetState extends State<ProfileMedicWidget>
                           child: Container(
                             width: double.infinity,
                             height: 250.0,
-                            decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context)
-                                  .primaryBackground,
+                            decoration: const BoxDecoration(
+                              color: Colors.white,
                             ),
                             child: Padding(
                               padding: const EdgeInsetsDirectional.fromSTEB(
@@ -4168,112 +4146,126 @@ class _ProfileMedicWidgetState extends State<ProfileMedicWidget>
                                         borderRadius:
                                             BorderRadius.circular(12.0),
                                       ),
-                                      child: Column(
-                                        mainAxisSize: MainAxisSize.max,
-                                        children: [
-                                          Container(
-                                            width: double.infinity,
-                                            height: 140.0,
-                                            decoration: BoxDecoration(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .secondary,
-                                              borderRadius: const BorderRadius.only(
-                                                bottomLeft:
-                                                    Radius.circular(0.0),
-                                                bottomRight:
-                                                    Radius.circular(0.0),
-                                                topLeft: Radius.circular(12.0),
-                                                topRight: Radius.circular(12.0),
+                                      child: InkWell(
+                                        splashColor: Colors.transparent,
+                                        focusColor: Colors.transparent,
+                                        hoverColor: Colors.transparent,
+                                        highlightColor: Colors.transparent,
+                                        onTap: () async {
+                                          context.pushNamed('appo1Medic');
+                                        },
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          children: [
+                                            Container(
+                                              width: double.infinity,
+                                              height: 140.0,
+                                              decoration: BoxDecoration(
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .secondary,
+                                                borderRadius: const BorderRadius.only(
+                                                  bottomLeft:
+                                                      Radius.circular(0.0),
+                                                  bottomRight:
+                                                      Radius.circular(0.0),
+                                                  topLeft:
+                                                      Radius.circular(12.0),
+                                                  topRight:
+                                                      Radius.circular(12.0),
+                                                ),
+                                              ),
+                                              child: Padding(
+                                                padding: const EdgeInsets.all(12.0),
+                                                child: Column(
+                                                  mainAxisSize:
+                                                      MainAxisSize.max,
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment
+                                                          .spaceBetween,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
+                                                  children: [
+                                                    Container(
+                                                      width: 36.0,
+                                                      height: 36.0,
+                                                      decoration: BoxDecoration(
+                                                        color:
+                                                            const Color(0x98FFFFFF),
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(12.0),
+                                                      ),
+                                                      alignment:
+                                                          const AlignmentDirectional(
+                                                              0.0, 0.0),
+                                                      child: const Icon(
+                                                        Icons.desktop_windows,
+                                                        color: Colors.white,
+                                                        size: 20.0,
+                                                      ),
+                                                    ),
+                                                    Text(
+                                                      'Dr. Stephan',
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .titleMedium
+                                                          .override(
+                                                            fontFamily:
+                                                                'Readex Pro',
+                                                            color: Colors.white,
+                                                            letterSpacing: 0.0,
+                                                          ),
+                                                    ),
+                                                    Text(
+                                                      '8 Sep',
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .bodyMedium
+                                                          .override(
+                                                            fontFamily:
+                                                                'Readex Pro',
+                                                            color: Colors.white,
+                                                            letterSpacing: 0.0,
+                                                          ),
+                                                    ),
+                                                  ],
+                                                ),
                                               ),
                                             ),
-                                            child: Padding(
-                                              padding: const EdgeInsets.all(12.0),
-                                              child: Column(
+                                            Padding(
+                                              padding: const EdgeInsetsDirectional
+                                                  .fromSTEB(
+                                                      12.0, 12.0, 12.0, 0.0),
+                                              child: Row(
                                                 mainAxisSize: MainAxisSize.max,
                                                 mainAxisAlignment:
                                                     MainAxisAlignment
                                                         .spaceBetween,
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.start,
                                                 children: [
-                                                  Container(
-                                                    width: 36.0,
-                                                    height: 36.0,
-                                                    decoration: BoxDecoration(
-                                                      color: const Color(0x98FFFFFF),
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              12.0),
+                                                  Padding(
+                                                    padding:
+                                                        const EdgeInsetsDirectional
+                                                            .fromSTEB(0.0, 0.0,
+                                                                8.0, 0.0),
+                                                    child: Text(
+                                                      'Headache',
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .bodyMedium
+                                                          .override(
+                                                            fontFamily:
+                                                                'Readex Pro',
+                                                            fontSize: 18.0,
+                                                            letterSpacing: 0.0,
+                                                          ),
                                                     ),
-                                                    alignment:
-                                                        const AlignmentDirectional(
-                                                            0.0, 0.0),
-                                                    child: const Icon(
-                                                      Icons.desktop_windows,
-                                                      color: Colors.white,
-                                                      size: 20.0,
-                                                    ),
-                                                  ),
-                                                  Text(
-                                                    'Dr. Richards',
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .titleMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              'Readex Pro',
-                                                          color: Colors.white,
-                                                          letterSpacing: 0.0,
-                                                        ),
-                                                  ),
-                                                  Text(
-                                                    '8 Sep',
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              'Readex Pro',
-                                                          color: Colors.white,
-                                                          letterSpacing: 0.0,
-                                                        ),
                                                   ),
                                                 ],
                                               ),
                                             ),
-                                          ),
-                                          Padding(
-                                            padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
-                                                    12.0, 12.0, 12.0, 0.0),
-                                            child: Row(
-                                              mainAxisSize: MainAxisSize.max,
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment
-                                                      .spaceBetween,
-                                              children: [
-                                                Padding(
-                                                  padding: const EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          0.0, 0.0, 8.0, 0.0),
-                                                  child: Text(
-                                                    'Fever',
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              'Readex Pro',
-                                                          fontSize: 18.0,
-                                                          letterSpacing: 0.0,
-                                                        ),
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                        ],
+                                          ],
+                                        ),
                                       ),
                                     ).animateOnPageLoad(animationsMap[
                                         'containerOnPageLoadAnimation7']!),
@@ -4998,10 +4990,9 @@ class _ProfileMedicWidgetState extends State<ProfileMedicWidget>
                           child: Container(
                             width: double.infinity,
                             height: 400.0,
-                            decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context)
-                                  .secondaryBackground,
-                              boxShadow: const [
+                            decoration: const BoxDecoration(
+                              color: Colors.white,
+                              boxShadow: [
                                 BoxShadow(
                                   blurRadius: 6.0,
                                   color: Color(0x1B090F13),
@@ -5011,7 +5002,7 @@ class _ProfileMedicWidgetState extends State<ProfileMedicWidget>
                                   ),
                                 )
                               ],
-                              borderRadius: const BorderRadius.only(
+                              borderRadius: BorderRadius.only(
                                 bottomLeft: Radius.circular(0.0),
                                 bottomRight: Radius.circular(0.0),
                                 topLeft: Radius.circular(16.0),

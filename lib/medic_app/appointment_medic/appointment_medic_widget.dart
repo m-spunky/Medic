@@ -131,60 +131,103 @@ class _AppointmentMedicWidgetState extends State<AppointmentMedicWidget> {
                                             padding:
                                                 const EdgeInsetsDirectional.fromSTEB(
                                                     20.0, 0.0, 30.0, 0.0),
-                                            child: Text(
-                                              'Home',
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .headlineLarge
-                                                      .override(
-                                                        fontFamily: 'Outfit',
-                                                        letterSpacing: 0.0,
-                                                      ),
+                                            child: InkWell(
+                                              splashColor: Colors.transparent,
+                                              focusColor: Colors.transparent,
+                                              hoverColor: Colors.transparent,
+                                              highlightColor:
+                                                  Colors.transparent,
+                                              onTap: () async {
+                                                context
+                                                    .pushNamed('homePageMedic');
+                                              },
+                                              child: Text(
+                                                'Home',
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .headlineLarge
+                                                        .override(
+                                                          fontFamily: 'Outfit',
+                                                          letterSpacing: 0.0,
+                                                        ),
+                                              ),
                                             ),
                                           ),
                                           Padding(
                                             padding:
                                                 const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 30.0, 0.0),
-                                            child: Text(
-                                              'Vision',
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .headlineLarge
-                                                      .override(
-                                                        fontFamily: 'Outfit',
-                                                        letterSpacing: 0.0,
-                                                      ),
+                                            child: InkWell(
+                                              splashColor: Colors.transparent,
+                                              focusColor: Colors.transparent,
+                                              hoverColor: Colors.transparent,
+                                              highlightColor:
+                                                  Colors.transparent,
+                                              onTap: () async {
+                                                context.pushNamed('vision');
+                                              },
+                                              child: Text(
+                                                'Vision',
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .headlineLarge
+                                                        .override(
+                                                          fontFamily: 'Outfit',
+                                                          letterSpacing: 0.0,
+                                                        ),
+                                              ),
                                             ),
                                           ),
                                           Padding(
                                             padding:
                                                 const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 30.0, 0.0),
-                                            child: Text(
-                                              'Library',
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .headlineLarge
-                                                      .override(
-                                                        fontFamily: 'Outfit',
-                                                        letterSpacing: 0.0,
-                                                      ),
+                                            child: InkWell(
+                                              splashColor: Colors.transparent,
+                                              focusColor: Colors.transparent,
+                                              hoverColor: Colors.transparent,
+                                              highlightColor:
+                                                  Colors.transparent,
+                                              onTap: () async {
+                                                context.pushNamed(
+                                                    'showDoctorsMedic');
+                                              },
+                                              child: Text(
+                                                'Doctors',
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .headlineLarge
+                                                        .override(
+                                                          fontFamily: 'Outfit',
+                                                          letterSpacing: 0.0,
+                                                        ),
+                                              ),
                                             ),
                                           ),
                                           Padding(
                                             padding:
                                                 const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 30.0, 0.0),
-                                            child: Text(
-                                              'Appointments',
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .headlineLarge
-                                                      .override(
-                                                        fontFamily: 'Outfit',
-                                                        letterSpacing: 0.0,
-                                                      ),
+                                            child: InkWell(
+                                              splashColor: Colors.transparent,
+                                              focusColor: Colors.transparent,
+                                              hoverColor: Colors.transparent,
+                                              highlightColor:
+                                                  Colors.transparent,
+                                              onTap: () async {
+                                                context.pushNamed(
+                                                    'coming_appoCopyCopy');
+                                              },
+                                              child: Text(
+                                                'Appointments',
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .headlineLarge
+                                                        .override(
+                                                          fontFamily: 'Outfit',
+                                                          letterSpacing: 0.0,
+                                                        ),
+                                              ),
                                             ),
                                           ),
                                         ],

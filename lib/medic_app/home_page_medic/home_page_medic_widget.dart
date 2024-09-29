@@ -132,15 +132,25 @@ class _HomePageMedicWidgetState extends State<HomePageMedicWidget> {
                                             padding:
                                                 const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 30.0, 0.0),
-                                            child: Text(
-                                              'Vision',
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .headlineLarge
-                                                      .override(
-                                                        fontFamily: 'Outfit',
-                                                        letterSpacing: 0.0,
-                                                      ),
+                                            child: InkWell(
+                                              splashColor: Colors.transparent,
+                                              focusColor: Colors.transparent,
+                                              hoverColor: Colors.transparent,
+                                              highlightColor:
+                                                  Colors.transparent,
+                                              onTap: () async {
+                                                context.pushNamed('vision');
+                                              },
+                                              child: Text(
+                                                'Vision',
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .headlineLarge
+                                                        .override(
+                                                          fontFamily: 'Outfit',
+                                                          letterSpacing: 0.0,
+                                                        ),
+                                              ),
                                             ),
                                           ),
                                           Padding(
@@ -181,7 +191,7 @@ class _HomePageMedicWidgetState extends State<HomePageMedicWidget> {
                                                   Colors.transparent,
                                               onTap: () async {
                                                 context.pushNamed(
-                                                    'comingAppointmentMedic');
+                                                    'coming_appoCopyCopy');
                                               },
                                               child: Text(
                                                 'Appointments',
@@ -206,8 +216,8 @@ class _HomePageMedicWidgetState extends State<HomePageMedicWidget> {
                                               const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 20.0, 0.0),
                                           child: FFButtonWidget(
-                                            onPressed: () {
-                                              print('Button pressed ...');
+                                            onPressed: () async {
+                                              context.pushNamed('logInMedic');
                                             },
                                             text: 'Login',
                                             options: FFButtonOptions(
@@ -240,7 +250,7 @@ class _HomePageMedicWidgetState extends State<HomePageMedicWidget> {
                                         ),
                                         FFButtonWidget(
                                           onPressed: () async {
-                                            context.pushNamed('logInMedic');
+                                            context.pushNamed('signinMedic');
                                           },
                                           text: 'Signup',
                                           options: FFButtonOptions(
@@ -277,8 +287,8 @@ class _HomePageMedicWidgetState extends State<HomePageMedicWidget> {
                                               const EdgeInsetsDirectional.fromSTEB(
                                                   20.0, 0.0, 30.0, 0.0),
                                           child: FFButtonWidget(
-                                            onPressed: () {
-                                              print('Button pressed ...');
+                                            onPressed: () async {
+                                              context.pushNamed('vision');
                                             },
                                             text: 'Contact',
                                             options: FFButtonOptions(
@@ -538,7 +548,8 @@ class _HomePageMedicWidgetState extends State<HomePageMedicWidget> {
                                             hoverColor: Colors.transparent,
                                             highlightColor: Colors.transparent,
                                             onTap: () async {
-                                              context.pushNamed('chat');
+                                              context
+                                                  .pushNamed('medicChatMedic');
                                             },
                                             child: ClipRRect(
                                               borderRadius:
@@ -558,7 +569,7 @@ class _HomePageMedicWidgetState extends State<HomePageMedicWidget> {
                                             highlightColor: Colors.transparent,
                                             onTap: () async {
                                               context.pushNamed(
-                                                  'comingAppointmentMedic');
+                                                  'coming_appoCopyCopy');
                                             },
                                             child: ClipRRect(
                                               borderRadius:
@@ -604,324 +615,363 @@ class _HomePageMedicWidgetState extends State<HomePageMedicWidget> {
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       children: [
-                        Column(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Align(
-                              alignment: const AlignmentDirectional(0.0, 0.0),
-                              child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 20.0, 0.0, 0.0),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
-                                          30.0, 0.0, 0.0, 0.0),
-                                      child: InkWell(
-                                        splashColor: Colors.transparent,
-                                        focusColor: Colors.transparent,
-                                        hoverColor: Colors.transparent,
-                                        highlightColor: Colors.transparent,
-                                        onTap: () async {
-                                          context.pushNamed('homePageMedic');
-                                        },
-                                        child: Text(
-                                          'Medic',
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyMedium
-                                              .override(
-                                                fontFamily: 'Readex Pro',
-                                                fontSize: 32.0,
-                                                letterSpacing: 0.0,
-                                                fontWeight: FontWeight.w900,
-                                              ),
-                                        ),
-                                      ),
-                                    ),
-                                    Row(
-                                      mainAxisSize: MainAxisSize.max,
-                                      children: [
-                                        Padding(
-                                          padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 0.0, 10.0, 0.0),
-                                          child: FFButtonWidget(
-                                            onPressed: () {
-                                              print('Button pressed ...');
-                                            },
-                                            text: 'Login',
-                                            options: FFButtonOptions(
-                                              height: 40.0,
-                                              padding: const EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      24.0, 0.0, 24.0, 0.0),
-                                              iconPadding: const EdgeInsetsDirectional
-                                                  .fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                              color: const Color(0xFFD4A48D),
-                                              textStyle: FlutterFlowTheme.of(
-                                                      context)
-                                                  .titleSmall
-                                                  .override(
-                                                    fontFamily: 'Readex Pro',
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .primaryText,
-                                                    letterSpacing: 0.0,
-                                                  ),
-                                              elevation: 3.0,
-                                              borderSide: const BorderSide(
-                                                color: Colors.transparent,
-                                                width: 1.0,
-                                              ),
-                                              borderRadius:
-                                                  BorderRadius.circular(8.0),
-                                            ),
-                                          ),
-                                        ),
-                                        Padding(
-                                          padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 0.0, 5.0, 0.0),
-                                          child: FFButtonWidget(
-                                            onPressed: () async {
-                                              context.pushNamed('logInMedic');
-                                            },
-                                            text: 'Signup',
-                                            options: FFButtonOptions(
-                                              height: 40.0,
-                                              padding: const EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      24.0, 0.0, 24.0, 0.0),
-                                              iconPadding: const EdgeInsetsDirectional
-                                                  .fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                              color: const Color(0xFFD4A48D),
-                                              textStyle: FlutterFlowTheme.of(
-                                                      context)
-                                                  .titleSmall
-                                                  .override(
-                                                    fontFamily: 'Readex Pro',
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .primaryText,
-                                                    letterSpacing: 0.0,
-                                                  ),
-                                              elevation: 3.0,
-                                              borderSide: const BorderSide(
-                                                color: Colors.transparent,
-                                                width: 1.0,
-                                              ),
-                                              borderRadius:
-                                                  BorderRadius.circular(8.0),
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                            Column(
-                              mainAxisSize: MainAxisSize.max,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Padding(
+                        SingleChildScrollView(
+                          child: Column(
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              Align(
+                                alignment: const AlignmentDirectional(0.0, 0.0),
+                                child: Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 20.0, 0.0, 0.0),
-                                  child: SingleChildScrollView(
-                                    scrollDirection: Axis.horizontal,
-                                    child: Row(
-                                      mainAxisSize: MainAxisSize.max,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.start,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Padding(
-                                          padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 0.0, 20.0, 0.0),
-                                          child: SingleChildScrollView(
-                                            scrollDirection: Axis.horizontal,
-                                            child: Row(
-                                              mainAxisSize: MainAxisSize.max,
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.start,
-                                              children: [
-                                                Padding(
-                                                  padding: const EdgeInsets.all(8.0),
-                                                  child: InkWell(
-                                                    splashColor:
-                                                        Colors.transparent,
-                                                    focusColor:
-                                                        Colors.transparent,
-                                                    hoverColor:
-                                                        Colors.transparent,
-                                                    highlightColor:
-                                                        Colors.transparent,
-                                                    onTap: () async {
-                                                      context.pushNamed(
-                                                          'homePageMedic');
-                                                    },
-                                                    child:
-                                                        AnimatedDefaultTextStyle(
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .headlineSmall
-                                                          .override(
-                                                            fontFamily:
-                                                                'Outfit',
-                                                            letterSpacing: 0.0,
-                                                          ),
-                                                      duration: const Duration(
-                                                          milliseconds: 600),
-                                                      curve: Curves.elasticOut,
-                                                      child: const Text(
-                                                        'Home',
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ),
-                                                Padding(
-                                                  padding: const EdgeInsets.all(8.0),
-                                                  child: Text(
-                                                    'Vision',
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .headlineSmall
-                                                        .override(
-                                                          fontFamily: 'Outfit',
-                                                          letterSpacing: 0.0,
-                                                        ),
-                                                  ),
-                                                ),
-                                                Padding(
-                                                  padding: const EdgeInsets.all(8.0),
-                                                  child: InkWell(
-                                                    splashColor:
-                                                        Colors.transparent,
-                                                    focusColor:
-                                                        Colors.transparent,
-                                                    hoverColor:
-                                                        Colors.transparent,
-                                                    highlightColor:
-                                                        Colors.transparent,
-                                                    onTap: () async {
-                                                      context.pushNamed(
-                                                          'showDoctorsMedic');
-                                                    },
-                                                    child: Text(
-                                                      'Doctors',
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .headlineSmall
-                                                          .override(
-                                                            fontFamily:
-                                                                'Outfit',
-                                                            letterSpacing: 0.0,
-                                                          ),
-                                                    ),
-                                                  ),
-                                                ),
-                                                Padding(
-                                                  padding: const EdgeInsets.all(8.0),
-                                                  child: InkWell(
-                                                    splashColor:
-                                                        Colors.transparent,
-                                                    focusColor:
-                                                        Colors.transparent,
-                                                    hoverColor:
-                                                        Colors.transparent,
-                                                    highlightColor:
-                                                        Colors.transparent,
-                                                    onTap: () async {
-                                                      context.pushNamed(
-                                                          'comingAppointmentMedic');
-                                                    },
-                                                    child: Text(
-                                                      'Appointments',
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .headlineSmall
-                                                          .override(
-                                                            fontFamily:
-                                                                'Outfit',
-                                                            letterSpacing: 0.0,
-                                                          ),
-                                                    ),
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                                Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 10.0, 0.0, 0.0),
-                                      child: Container(
-                                        decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(4.0),
-                                          border: Border.all(
-                                            color: FlutterFlowTheme.of(context)
-                                                .primary,
-                                          ),
-                                        ),
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                            30.0, 0.0, 0.0, 0.0),
                                         child: InkWell(
                                           splashColor: Colors.transparent,
                                           focusColor: Colors.transparent,
                                           hoverColor: Colors.transparent,
                                           highlightColor: Colors.transparent,
                                           onTap: () async {
-                                            context.pushNamed(
-                                              'homePageMedic',
-                                              extra: <String, dynamic>{
-                                                kTransitionInfoKey:
-                                                    const TransitionInfo(
-                                                  hasTransition: true,
-                                                  transitionType:
-                                                      PageTransitionType.fade,
-                                                ),
-                                              },
-                                            );
+                                            context.pushNamed('homePageMedic');
                                           },
-                                          child: ClipRRect(
+                                          child: Text(
+                                            'Medic',
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyMedium
+                                                .override(
+                                                  fontFamily: 'Readex Pro',
+                                                  color: Colors.black,
+                                                  fontSize: 32.0,
+                                                  letterSpacing: 0.0,
+                                                  fontWeight: FontWeight.w900,
+                                                ),
+                                          ),
+                                        ),
+                                      ),
+                                      Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        children: [
+                                          Padding(
+                                            padding:
+                                                const EdgeInsetsDirectional.fromSTEB(
+                                                    0.0, 0.0, 10.0, 0.0),
+                                            child: FFButtonWidget(
+                                              onPressed: () {
+                                                print('Button pressed ...');
+                                              },
+                                              text: 'Login',
+                                              options: FFButtonOptions(
+                                                height: 40.0,
+                                                padding: const EdgeInsetsDirectional
+                                                    .fromSTEB(
+                                                        24.0, 0.0, 24.0, 0.0),
+                                                iconPadding:
+                                                    const EdgeInsetsDirectional
+                                                        .fromSTEB(
+                                                            0.0, 0.0, 0.0, 0.0),
+                                                color: const Color(0xFFD4A48D),
+                                                textStyle:
+                                                    FlutterFlowTheme.of(context)
+                                                        .titleSmall
+                                                        .override(
+                                                          fontFamily:
+                                                              'Readex Pro',
+                                                          color: Colors.black,
+                                                          letterSpacing: 0.0,
+                                                        ),
+                                                elevation: 3.0,
+                                                borderSide: const BorderSide(
+                                                  color: Colors.transparent,
+                                                  width: 1.0,
+                                                ),
+                                                borderRadius:
+                                                    BorderRadius.circular(8.0),
+                                              ),
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding:
+                                                const EdgeInsetsDirectional.fromSTEB(
+                                                    0.0, 0.0, 5.0, 0.0),
+                                            child: FFButtonWidget(
+                                              onPressed: () async {
+                                                context.pushNamed('logInMedic');
+                                              },
+                                              text: 'Signup',
+                                              options: FFButtonOptions(
+                                                height: 40.0,
+                                                padding: const EdgeInsetsDirectional
+                                                    .fromSTEB(
+                                                        24.0, 0.0, 24.0, 0.0),
+                                                iconPadding:
+                                                    const EdgeInsetsDirectional
+                                                        .fromSTEB(
+                                                            0.0, 0.0, 0.0, 0.0),
+                                                color: const Color(0xFFD4A48D),
+                                                textStyle:
+                                                    FlutterFlowTheme.of(context)
+                                                        .titleSmall
+                                                        .override(
+                                                          fontFamily:
+                                                              'Readex Pro',
+                                                          color: Colors.black,
+                                                          letterSpacing: 0.0,
+                                                        ),
+                                                elevation: 3.0,
+                                                borderSide: const BorderSide(
+                                                  color: Colors.transparent,
+                                                  width: 1.0,
+                                                ),
+                                                borderRadius:
+                                                    BorderRadius.circular(8.0),
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              Column(
+                                mainAxisSize: MainAxisSize.max,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 20.0, 0.0, 0.0),
+                                    child: SingleChildScrollView(
+                                      scrollDirection: Axis.horizontal,
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Padding(
+                                            padding:
+                                                const EdgeInsetsDirectional.fromSTEB(
+                                                    0.0, 0.0, 20.0, 0.0),
+                                            child: SingleChildScrollView(
+                                              scrollDirection: Axis.horizontal,
+                                              child: Row(
+                                                mainAxisSize: MainAxisSize.max,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.start,
+                                                children: [
+                                                  Padding(
+                                                    padding:
+                                                        const EdgeInsets.all(8.0),
+                                                    child: InkWell(
+                                                      splashColor:
+                                                          Colors.transparent,
+                                                      focusColor:
+                                                          Colors.transparent,
+                                                      hoverColor:
+                                                          Colors.transparent,
+                                                      highlightColor:
+                                                          Colors.transparent,
+                                                      onTap: () async {
+                                                        context.pushNamed(
+                                                            'homePageMedic');
+                                                      },
+                                                      child:
+                                                          AnimatedDefaultTextStyle(
+                                                        style: FlutterFlowTheme
+                                                                .of(context)
+                                                            .headlineSmall
+                                                            .override(
+                                                              fontFamily:
+                                                                  'Outfit',
+                                                              color:
+                                                                  Colors.black,
+                                                              letterSpacing:
+                                                                  0.0,
+                                                            ),
+                                                        duration: const Duration(
+                                                            milliseconds: 600),
+                                                        curve:
+                                                            Curves.elasticOut,
+                                                        child: const Text(
+                                                          'Home',
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  Padding(
+                                                    padding:
+                                                        const EdgeInsets.all(8.0),
+                                                    child: InkWell(
+                                                      splashColor:
+                                                          Colors.transparent,
+                                                      focusColor:
+                                                          Colors.transparent,
+                                                      hoverColor:
+                                                          Colors.transparent,
+                                                      highlightColor:
+                                                          Colors.transparent,
+                                                      onTap: () async {
+                                                        context.pushNamed(
+                                                            'vision');
+                                                      },
+                                                      child: Text(
+                                                        'Vision',
+                                                        style: FlutterFlowTheme
+                                                                .of(context)
+                                                            .headlineSmall
+                                                            .override(
+                                                              fontFamily:
+                                                                  'Outfit',
+                                                              color:
+                                                                  Colors.black,
+                                                              letterSpacing:
+                                                                  0.0,
+                                                            ),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  Padding(
+                                                    padding:
+                                                        const EdgeInsets.all(8.0),
+                                                    child: InkWell(
+                                                      splashColor:
+                                                          Colors.transparent,
+                                                      focusColor:
+                                                          Colors.transparent,
+                                                      hoverColor:
+                                                          Colors.transparent,
+                                                      highlightColor:
+                                                          Colors.transparent,
+                                                      onTap: () async {
+                                                        context.pushNamed(
+                                                            'showDoctorsMedic');
+                                                      },
+                                                      child: Text(
+                                                        'Doctors',
+                                                        style: FlutterFlowTheme
+                                                                .of(context)
+                                                            .headlineSmall
+                                                            .override(
+                                                              fontFamily:
+                                                                  'Outfit',
+                                                              color:
+                                                                  Colors.black,
+                                                              letterSpacing:
+                                                                  0.0,
+                                                            ),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  Padding(
+                                                    padding:
+                                                        const EdgeInsets.all(8.0),
+                                                    child: InkWell(
+                                                      splashColor:
+                                                          Colors.transparent,
+                                                      focusColor:
+                                                          Colors.transparent,
+                                                      hoverColor:
+                                                          Colors.transparent,
+                                                      highlightColor:
+                                                          Colors.transparent,
+                                                      onTap: () async {
+                                                        context.pushNamed(
+                                                            'coming_appoCopyCopy');
+                                                      },
+                                                      child: Text(
+                                                        'Appointments',
+                                                        style: FlutterFlowTheme
+                                                                .of(context)
+                                                            .headlineSmall
+                                                            .override(
+                                                              fontFamily:
+                                                                  'Outfit',
+                                                              color:
+                                                                  Colors.black,
+                                                              letterSpacing:
+                                                                  0.0,
+                                                            ),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                  Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                            0.0, 10.0, 0.0, 0.0),
+                                        child: Container(
+                                          decoration: BoxDecoration(
                                             borderRadius:
-                                                BorderRadius.circular(16.0),
-                                            child: Image.asset(
-                                              'assets/images/banner23.png',
-                                              width: MediaQuery.sizeOf(context)
-                                                      .width *
-                                                  0.95,
-                                              fit: BoxFit.contain,
+                                                BorderRadius.circular(4.0),
+                                            border: Border.all(
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .primary,
+                                            ),
+                                          ),
+                                          child: InkWell(
+                                            splashColor: Colors.transparent,
+                                            focusColor: Colors.transparent,
+                                            hoverColor: Colors.transparent,
+                                            highlightColor: Colors.transparent,
+                                            onTap: () async {
+                                              context.pushNamed(
+                                                'homePageMedic',
+                                                extra: <String, dynamic>{
+                                                  kTransitionInfoKey:
+                                                      const TransitionInfo(
+                                                    hasTransition: true,
+                                                    transitionType:
+                                                        PageTransitionType.fade,
+                                                  ),
+                                                },
+                                              );
+                                            },
+                                            child: ClipRRect(
+                                              borderRadius:
+                                                  BorderRadius.circular(16.0),
+                                              child: Image.asset(
+                                                'assets/images/banner23.png',
+                                                width:
+                                                    MediaQuery.sizeOf(context)
+                                                            .width *
+                                                        0.95,
+                                                fit: BoxFit.contain,
+                                              ),
                                             ),
                                           ),
                                         ),
                                       ),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                            Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
-                                  10.0, 0.0, 10.0, 0.0),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Expanded(
-                                    child: Padding(
+                                    ],
+                                  ),
+                                ],
+                              ),
+                              Padding(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    10.0, 0.0, 10.0, 0.0),
+                                child: ListView(
+                                  padding: EdgeInsets.zero,
+                                  shrinkWrap: true,
+                                  scrollDirection: Axis.vertical,
+                                  children: [
+                                    Padding(
                                       padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 5.0, 0.0, 0.0),
                                       child: GridView(
@@ -999,7 +1049,7 @@ class _HomePageMedicWidgetState extends State<HomePageMedicWidget> {
                                             highlightColor: Colors.transparent,
                                             onTap: () async {
                                               context.pushNamed(
-                                                  'comingAppointmentMedic');
+                                                  'coming_appoCopyCopy');
                                             },
                                             child: ClipRRect(
                                               borderRadius:
@@ -1015,11 +1065,11 @@ class _HomePageMedicWidgetState extends State<HomePageMedicWidget> {
                                         ],
                                       ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ],
                     ),

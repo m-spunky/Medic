@@ -11,7 +11,7 @@ export '/medic_app/show_doctors_medic/show_doctors_medic_widget.dart'
 export '/medic_app/coming_appointment_medic/coming_appointment_medic_widget.dart'
     show ComingAppointmentMedicWidget;
 export '/pages/chat/chat_widget.dart' show ChatWidget;
-export '/pages/coming_appo_copy/coming_appo_copy_widget.dart'
+export '/medic_app/coming_appo_copy/coming_appo_copy_widget.dart'
     show ComingAppoCopyWidget;
 export '/medic_app/medic_chat_medic/medic_chat_medic_widget.dart'
     show MedicChatMedicWidget;
@@ -31,3 +31,6 @@ export '/medic_app/signin_medic/signin_medic_widget.dart'
     show SigninMedicWidget;
 export '/pages/chat_message1/chat_message1_widget.dart' show ChatMessage1Widget;
 export '/medic_app/appo1_medic/appo1_medic_widget.dart' show Appo1MedicWidget;
+export '/medic_app/vision/vision_widget.dart' show VisionWidget;
+export '/medic_app/coming_appo_copy_copy/coming_appo_copy_copy_widget.dart'
+    show ComingAppoCopyCopyWidget;

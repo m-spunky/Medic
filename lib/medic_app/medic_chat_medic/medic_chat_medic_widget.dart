@@ -142,14 +142,23 @@ class _MedicChatMedicWidgetState extends State<MedicChatMedicWidget> {
                                     Padding(
                                       padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 30.0, 0.0),
-                                      child: Text(
-                                        'Vision',
-                                        style: FlutterFlowTheme.of(context)
-                                            .headlineLarge
-                                            .override(
-                                              fontFamily: 'Outfit',
-                                              letterSpacing: 0.0,
-                                            ),
+                                      child: InkWell(
+                                        splashColor: Colors.transparent,
+                                        focusColor: Colors.transparent,
+                                        hoverColor: Colors.transparent,
+                                        highlightColor: Colors.transparent,
+                                        onTap: () async {
+                                          context.pushNamed('vision');
+                                        },
+                                        child: Text(
+                                          'Vision',
+                                          style: FlutterFlowTheme.of(context)
+                                              .headlineLarge
+                                              .override(
+                                                fontFamily: 'Outfit',
+                                                letterSpacing: 0.0,
+                                              ),
+                                        ),
                                       ),
                                     ),
                                     Padding(

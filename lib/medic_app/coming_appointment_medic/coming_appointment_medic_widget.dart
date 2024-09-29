@@ -698,8 +698,8 @@ class _ComingAppointmentMedicWidgetState
                             thickness: 2.0,
                           ),
                           FFButtonWidget(
-                            onPressed: () {
-                              print('Button pressed ...');
+                            onPressed: () async {
+                              context.pushNamed('appointmentMedic');
                             },
                             text: 'Add New Appointment',
                             options: FFButtonOptions(

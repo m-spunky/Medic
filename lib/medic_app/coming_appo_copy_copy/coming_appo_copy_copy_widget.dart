@@ -3,32 +3,26 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'coming_appo_copy_model.dart';
-export 'coming_appo_copy_model.dart';
+import 'coming_appo_copy_copy_model.dart';
+export 'coming_appo_copy_copy_model.dart';
 
-class ComingAppoCopyWidget extends StatefulWidget {
-  const ComingAppoCopyWidget({
-    super.key,
-    this.scheduleDay,
-    String? scheduleMonth,
-  }) : scheduleMonth = scheduleMonth ?? 'October';
-
-  final String? scheduleDay;
-  final String scheduleMonth;
+class ComingAppoCopyCopyWidget extends StatefulWidget {
+  const ComingAppoCopyCopyWidget({super.key});
 
   @override
-  State<ComingAppoCopyWidget> createState() => _ComingAppoCopyWidgetState();
+  State<ComingAppoCopyCopyWidget> createState() =>
+      _ComingAppoCopyCopyWidgetState();
 }
 
-class _ComingAppoCopyWidgetState extends State<ComingAppoCopyWidget> {
-  late ComingAppoCopyModel _model;
+class _ComingAppoCopyCopyWidgetState extends State<ComingAppoCopyCopyWidget> {
+  late ComingAppoCopyCopyModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => ComingAppoCopyModel());
+    _model = createModel(context, () => ComingAppoCopyCopyModel());
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
@@ -59,8 +53,8 @@ class _ComingAppoCopyWidgetState extends State<ComingAppoCopyWidget> {
               color: FlutterFlowTheme.of(context).info,
               size: 24.0,
             ),
-            onPressed: () {
-              print('IconButton pressed ...');
+            onPressed: () async {
+              context.safePop();
             },
           ),
           title: Text(
@@ -115,101 +109,6 @@ class _ComingAppoCopyWidgetState extends State<ComingAppoCopyWidget> {
                                     fontWeight: FontWeight.w500,
                                     lineHeight: 1.1,
                                   ),
-                            ),
-                            Row(
-                              mainAxisSize: MainAxisSize.max,
-                              children: [
-                                Container(
-                                  width: 80.0,
-                                  height: 80.0,
-                                  decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context).primary,
-                                    borderRadius: BorderRadius.circular(14.0),
-                                  ),
-                                  child: Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Text(
-                                        valueOrDefault<String>(
-                                          widget.scheduleDay,
-                                          '1',
-                                        ),
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              fontFamily: 'Readex Pro',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .alternate,
-                                              fontSize: 28.0,
-                                              letterSpacing: 0.0,
-                                              fontWeight: FontWeight.w300,
-                                              lineHeight: 1.3,
-                                            ),
-                                      ),
-                                      Text(
-                                        widget.scheduleMonth,
-                                        style: FlutterFlowTheme.of(context)
-                                            .titleSmall
-                                            .override(
-                                              fontFamily: 'Readex Pro',
-                                              letterSpacing: 0.0,
-                                            ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Expanded(
-                                  child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
-                                        14.0, 0.0, 0.0, 0.0),
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.max,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          'Diabetes',
-                                          style: FlutterFlowTheme.of(context)
-                                              .headlineLarge
-                                              .override(
-                                                fontFamily: 'Outfit',
-                                                letterSpacing: 0.0,
-                                              ),
-                                        ),
-                                        Text(
-                                          '9:30 am',
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyMedium
-                                              .override(
-                                                fontFamily: 'Readex Pro',
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .secondaryText,
-                                                letterSpacing: 0.0,
-                                                fontWeight: FontWeight.w500,
-                                              ),
-                                        ),
-                                      ].divide(const SizedBox(height: 8.0)),
-                                    ),
-                                  ),
-                                ),
-                                Container(
-                                  width: 42.0,
-                                  height: 42.0,
-                                  decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
-                                        .secondaryBackground,
-                                    shape: BoxShape.circle,
-                                  ),
-                                  child: Icon(
-                                    Icons.phone_sharp,
-                                    color: FlutterFlowTheme.of(context).primary,
-                                    size: 20.0,
-                                  ),
-                                ),
-                              ],
                             ),
                             Row(
                               mainAxisSize: MainAxisSize.max,
@@ -726,8 +625,8 @@ class _ComingAppoCopyWidgetState extends State<ComingAppoCopyWidget> {
                       color: FlutterFlowTheme.of(context).alternate,
                     ),
                     FFButtonWidget(
-                      onPressed: () {
-                        print('Button pressed ...');
+                      onPressed: () async {
+                        context.pushNamed('appointmentMedic');
                       },
                       text: 'Add New Appointment',
                       options: FFButtonOptions(
