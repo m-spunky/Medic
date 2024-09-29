@@ -10,7 +10,7 @@ Prototype Drive link : (https://drive.google.com/file/d/1yIviUvTXwYfdw8XAxR_XDKk
 ## Features
 
 1. **Patient Profiling**:  
-   Allows users to create and manage patient profiles. Each profile stores essential medical details such as history, diagnosis, treatments, and more.
+   Allows users to create and manage patient profiles. Each profile stores essential medical details such as personal information , history , known conditions , allergies , addiction status , current medications. this profile later used by MedicAI for generate personalise responses. 
 
 2. **Appointment Scheduling**:  
    Helps users manage and schedule appointments with doctors or healthcare professionals. Features include booking, rescheduling, and sending reminders.
