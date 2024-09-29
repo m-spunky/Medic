@@ -1,0 +1,49 @@
+{
+    "doctors": [
+        {
+            "name": "Dr. Alice Smith",
+            "specialization": "Neurology",
+            "available_slots": {
+                "Monday": ["10:00 AM", "02:00 PM"],
+                "Wednesday": ["09:00 AM", "01:00 PM"]
+            },
+            "keywords": ["headache", "migraine", "seizure"]
+        },
+        {
+            "name": "Dr. Bob Johnson",
+            "specialization": "General Medicine",
+            "available_slots": {
+                "Tuesday": ["11:00 AM", "03:00 PM"],
+                "Thursday": ["01:00 PM"]
+            },
+            "keywords": ["flu", "fever", "general checkup"]
+        },
+        {
+            "name": "Dr. Sarah Brown",
+            "specialization": "Dermatology",
+            "available_slots": {
+                "Thursday": ["01:00 PM"],
+                "Friday": ["10:00 AM", "03:00 PM"]
+            },
+            "keywords": ["skin rash", "acne", "eczema"]
+        },
+        {
+            "name": "Dr. Kiran Pandey",
+            "specialization": "Orthopedics",
+            "available_slots": {
+                "Monday": ["09:00 AM", "11:00 AM"],
+                "Wednesday": ["02:00 PM"]
+            },
+            "keywords": ["joint pain", "fracture", "sports injury"]
+        },
+        {
+            "name": "Dr. Mia Lopez",
+            "specialization": "Pediatrics",
+            "available_slots": {
+                "Tuesday": ["09:00 AM", "01:00 PM"],
+                "Thursday": ["10:00 AM", "02:00 PM"]
+            },
+            "keywords": ["child health", "vaccination", "fever in children"]
+        }
+    ]
+}
