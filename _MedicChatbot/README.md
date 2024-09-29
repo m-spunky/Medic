@@ -51,4 +51,5 @@ By integrating **fine-tuning** (using RAFT) with **RAG**, we created a robust **
 
 
 
-![image](https://github.com/user-attachments/assets/e8ce9b40-3274-4fc3-a194-7b845c19c888)
+![image](https://github.com/user-attachments/assets/51ac44ea-3fd7-42ca-816b-8fefb2733d0c)
+
