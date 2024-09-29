@@ -1,4 +1,6 @@
 # Medic - Your Health Assistant
+
+![image](https://github.com/user-attachments/assets/f14a0170-d29f-4a59-b9aa-ef593a86ce40)
 ## Made By Team Phenix
 <h5>1. Mayur Jadhav      2. Ameya Kalgutkar      3.Pratham Gupta</h5>
 
@@ -55,3 +57,5 @@
 ### Firebase Setup (Optional)
 
 - If you're using Firebase for backend services such as authentication, real-time data, or storage, configure Firebase as per the instructions in the [Firebase for Flutter documentation](https://firebase.flutter.dev/docs/overview).
+
+
