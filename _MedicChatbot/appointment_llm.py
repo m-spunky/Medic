@@ -4,7 +4,7 @@ from flask import Flask, request, jsonify
 import openai
 
 app = Flask(__name__)
-client = openai.OpenAI(api_key="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")
+client = openai.OpenAI(api_key="ENTER YOUR OPENAI KEY")
 
 def load_doctors():
     with open('doctors.json', 'r') as f:
