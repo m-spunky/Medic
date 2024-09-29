@@ -3,6 +3,7 @@
 ## Overview
 
 The **Medic Model** is a specialized system designed for accurate and efficient medical question answering. Our approach combines **Retrieval-Augmented Fine-Tuning (RAFT)** with the state-of-the-art **Retrieval-Augmented Generation (RAG)** technique. This enables users to receive highly accurate, contextually curated responses based on both fine-tuned models and retrieval from relevant data sources.
+## (All the Setup things are discussed in (https://github.com/m-spunky/medic/blob/main/_MedicChatbot/finetune_model/README.md))
 
 ## Key Components
 
